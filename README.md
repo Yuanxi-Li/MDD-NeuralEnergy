@@ -1,4 +1,4 @@
-Mathematical models of the VTA-NAc-mPFC neural circuit under different dopamine concentration input (A DEMO)
+Mathematical models of the VTA-NAc-mPFC neural circuit under different dopamine concentration input (A DEMO).
 Please cite these references:
 1. Li Y, Zhang B, Pan X, et al. Dopamine-mediated major depressive disorder in the neural circuit of ventral tegmental area-nucleus accumbens-medial prefrontal cortex: from biological evidence to computational models[J]. Frontiers in Cellular Neuroscience, 2022, 16: 923039.
 2. Li Y, Zhang B, Liu Z, et al. Neural energy computations based on Hodgkin-Huxley models bridge abnormal neuronal activities and energy consumption patterns of major depressive disorder[J]. Computers in Biology and Medicine, 2023, 166: 107500.
