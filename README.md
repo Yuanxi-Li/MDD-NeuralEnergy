@@ -1,4 +1,4 @@
-**Mathematical models of the VTA-NAc-mPFC neural circuit under different dopamine concentration inputs (A DEMO)**  
+**Mathematical models of the VTA-NAc-mPFC neural circuit under different dopamine concentration inputs**  
 **Please cite these references:**  
 1. Li Y, Zhang B, Pan X, et al. Dopamine-mediated major depressive disorder in the neural circuit of ventral tegmental area-nucleus accumbens-medial prefrontal cortex: from biological evidence to computational models[J]. Frontiers in Cellular Neuroscience, 2022, 16: 923039.  
 2. Li Y, Zhang B, Liu Z, et al. Neural energy computations based on Hodgkin-Huxley models bridge abnormal neuronal activities and energy consumption patterns of major depressive disorder[J]. Computers in Biology and Medicine, 2023, 166: 107500.  
@@ -17,6 +17,6 @@ Run CalculateSurfaceArea.mlx to get the surface area of each neuron.
   
   
 **Additional notes:**  
-1. We have different parameter settings for the above references. Please adjust the parameters of this DEMO according to the references.  
+1. We have adjusted the parameter settings for different studies. Please adjust the parameters of this DEMO according to the references if you want to reproduce our results.  
 2. The resulting file is too large for us and we are unable to upload it to GITHUB. Our program is reproducible. Please follow the steps described above, save the results to your computer after running it, and then proceed to the next step!  
 3. Please contact Dr. Yuanxi Li at dr.yuanxili@gmail.com if you have any questions.  
