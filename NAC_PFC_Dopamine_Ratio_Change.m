@@ -183,42 +183,42 @@ toc
            
        %----------------------NaF----------------------------
        
-       %计算NaF的mtau htau
+       % NaF, mtau htau
        [tauh_NaF_MSN_Soma, taum_NaF_MSN_Soma] = tau_NaF_MSN(y(1));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_NaF_MSN_Soma = infinite(y(1),NaF_MSN_Soma.mVhalf,NaF_MSN_Soma.mk);
        hInf_NaF_MSN_Soma = infinite(y(1),NaF_MSN_Soma.hVhalf,NaF_MSN_Soma.hk);
        
-       %计算3 4m,h
+       % 3 4 m,h
        dy(3) = (mInf_NaF_MSN_Soma-y(3))/taum_NaF_MSN_Soma;
        dy(4) = (hInf_NaF_MSN_Soma-y(4))/tauh_NaF_MSN_Soma;
        I_NaF_MSN_Soma = NaF_MSN_Soma.gmax*(y(3)^3)*y(4)*(y(1)-NaF_MSN_Soma.rev);%-----mA
        
        %----------------------NaP----------------------------
        
-       %计算NaP的mtau htau
+       % NaP, mtau htau
        [tauh_NaP_MSN_Soma, taum_NaP_MSN_Soma] = tau_NaP_MSN(y(1));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_NaP_MSN_Soma = infinite(y(1),NaP_MSN_Soma.mVhalf,NaP_MSN_Soma.mk);
        hInf_NaP_MSN_Soma = infinite(y(1),NaP_MSN_Soma.hVhalf,NaP_MSN_Soma.hk);
        
-       %计算5 6  m,h
+       % 5 6  m,h
        dy(5) = (mInf_NaP_MSN_Soma-y(5))/taum_NaP_MSN_Soma;
        dy(6) = (hInf_NaP_MSN_Soma-y(6))/tauh_NaP_MSN_Soma;
        I_NaP_MSN_Soma = NaP_MSN_Soma.gmax*y(5)*y(6)*(y(1)-NaP_MSN_Soma.rev);%---------mA
        
        %----------------------KAf----------------------------
        
-       %计算KAf的mtau htau
+       % KAf, mtau htau
        [tauh_KAf_MSN_Soma, taum_KAf_MSN_Soma] = tau_KAf_MSN(y(1));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_KAf_MSN_Soma = infinite(y(1),KAf_MSN_Soma.mVhalf,KAf_MSN_Soma.mk);
        hInf_KAf_MSN_Soma = infinite(y(1),KAf_MSN_Soma.hVhalf,KAf_MSN_Soma.hk);
        
-       %计算7 8m,h
+       % 7 8 m,h
        dy(7) = (mInf_KAf_MSN_Soma-y(7))/taum_KAf_MSN_Soma;
        dy(8) = (hInf_KAf_MSN_Soma-y(8))/tauh_KAf_MSN_Soma;
        I_KAf_MSN_Soma = KAf_MSN_Soma.gmax*(y(7)^2)*y(8)*(y(1)-KAf_MSN_Soma.rev);%---------mA
@@ -227,14 +227,14 @@ toc
        %----------------------KAs----------------------------
        
        
-       %计算KAs的mtau htau
+       % KAs, mtau htau
        [tauh_KAs_MSN_Soma, taum_KAs_MSN_Soma] = tau_KAs_MSN(y(1));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_KAs_MSN_Soma = infinite(y(1),KAs_MSN_Soma.mVhalf,KAs_MSN_Soma.mk);
        hInf_KAs_MSN_Soma = infinite(y(1),KAs_MSN_Soma.hVhalf,KAs_MSN_Soma.hk);
        
-       %计算9 10m,h
+       % 9 10 m,h
        dy(9) = (mInf_KAs_MSN_Soma-y(9))/taum_KAs_MSN_Soma;
        dy(10) = (hInf_KAs_MSN_Soma-y(10))/tauh_KAs_MSN_Soma;
        I_KAs_MSN_Soma = KAs_MSN_Soma.gmax(floor(t/0.02)+1)*(y(9)^2)*(KAs_MSN_Soma.a*y(10)+(1-KAs_MSN_Soma.a))*(y(1)-KAs_MSN_Soma.rev);%---------mA
@@ -242,52 +242,52 @@ toc
        %----------------------KIR----------------------------
        
        
-       %计算KIR的mtau
+       % KIR, mtau
        taum_KIR_MSN_Soma = tau_KIR_MSN(y(1));
        
-       %计算mInf
+       % mInf
        mInf_KIR_MSN_Soma = infinite(y(1),KIR_MSN.mVhalf,KIR_MSN.mk);
        
-       %计算11 m
+       % 11 m
        dy(11) = (mInf_KIR_MSN_Soma-y(11))/taum_KIR_MSN_Soma;
        I_KIR_MSN_Soma = KIR_MSN.gmax*y(11)*(y(1)-KIR_MSN.rev);%---------mA
        
        %----------------------KRP----------------------------
        
-       %计算KRP的mtau htau
+       % KRP, mtau htau
        [tauh_KRP_MSN_Soma, taum_KRP_MSN_Soma] = tau_KRP_MSN(y(1));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_KRP_MSN_Soma = infinite(y(1),KRP_MSN.mVhalf,KRP_MSN.mk);
        hInf_KRP_MSN_Soma = infinite(y(1),KRP_MSN.mVhalf,KRP_MSN.mk);
        
-       %计算12 13 m,h
+       % 12 13 m,h
        dy(12) = (mInf_KRP_MSN_Soma-y(12))/taum_KRP_MSN_Soma;
        dy(13) = (hInf_KRP_MSN_Soma-y(13))/tauh_KRP_MSN_Soma;
        I_KRP_MSN_Soma = KRP_MSN.gmax*y(12)*(KRP_MSN.a*y(13)+(1-KRP_MSN.a))*(y(1)-KRP_MSN.rev);%---------mA
        
-       %----------------------Ca固定参数----------------------------
+       %----------------------Ca dynamics parameters----------------------------
        
        z_MSN = 2;
        F_MSN = 96489;%-------------Faraday(C/mod)
        R_MSN = 8.31;%------------J/(mol*K)
        T_MSN = 35+273.15;%--------K
-       Ca_0_MSN = 5;%---------Ca库
-       CaL_0_MSN = 5;%--------CaL库
+       Ca_0_MSN = 5;%---------Ca store
+       CaL_0_MSN = 5;%--------CaL store
        
        
        
        
        %----------------------CaL1_2----------------------------
        
-       %计算CaL1_2的mtau htau
+       % CaL1_2, mtau htau
        [tauh_CaL_MSN_Soma, taum_CaL_MSN_Soma] = tau_CaL_MSN(y(1));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaL1_2_MSN_Soma = infinite(y(1),CaL1_2_MSN.mVhalf,CaL1_2_MSN.mk);
        hInf_CaL1_2_MSN_Soma = infinite(y(1),CaL1_2_MSN.mVhalf,CaL1_2_MSN.mk);
        
-       %计算 14 15 m,h  % 25 L型Ca CaL_i
+       %  14 15 m,h
        dy(14) = (mInf_CaL1_2_MSN_Soma-y(14))/taum_CaL_MSN_Soma;
        dy(15) = (hInf_CaL1_2_MSN_Soma-y(15))/tauh_CaL_MSN_Soma;
        
@@ -296,13 +296,13 @@ toc
        
        %----------------------CaL1_3----------------------------
        
-       %计算CaL1_3的mtau htau-----------与CaL1_2的相同
+       % CaL1_3, mtau htau
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaL1_3_MSN_Soma = infinite(y(1),CaL1_3_MSN.mVhalf,CaL1_3_MSN.mk);
        hInf_CaL1_3_MSN_Soma = infinite(y(1),CaL1_3_MSN.mVhalf,CaL1_3_MSN.mk);
        
-       %计算16 17m,h  %25 L型Ca CaL_i
+       % 16 17m,h
        dy(16) = (mInf_CaL1_3_MSN_Soma-y(16))/taum_CaL_MSN_Soma;
        dy(17) = (hInf_CaL1_3_MSN_Soma-y(17))/tauh_CaL_MSN_Soma;
        
@@ -314,16 +314,16 @@ toc
        %----------------------CaN----------------------------
        
        
-       %计算CaN的mtau htau
+       % CaN, mtau htau
        [tauh_CaN_MSN_Soma, taum_CaN_MSN_Soma] = tau_CaN_MSN(y(1));
        
        
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaN_MSN_Soma = infinite(y(1), CaN_MSN.mVhalf, CaN_MSN.mk);
        hInf_CaN_MSN_Soma = infinite(y(1), CaN_MSN.hVhalf, CaN_MSN.hk);
        
-       %计算 18 19 m,h  %26 Ca Ca_i
+       %  18 19 m,h
        dy(18) = (mInf_CaN_MSN_Soma-y(18))/taum_CaN_MSN_Soma;
        dy(19) = (hInf_CaN_MSN_Soma-y(19))/tauh_CaN_MSN_Soma;
        
@@ -334,14 +334,14 @@ toc
        %----------------------CaQ----------------------------
        
        
-       %计算CaQ的mtau
+       % CaQ, mtau
        taum_CaQ_MSN_Soma = tau_CaQ_MSN(y(1));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaQ_MSN_Soma = infinite(y(1),CaQ_MSN.mVhalf,CaQ_MSN.mk);
        
        
-       %计算 20 m  % 26 Ca Ca_i
+       %  20 m
        dy(20) = (mInf_CaQ_MSN_Soma-y(20))/taum_CaQ_MSN_Soma;
        
        g_CaQ_MSN_Soma = g_Ca_MSN(y(1),y(26),Ca_0_MSN);
@@ -353,14 +353,14 @@ toc
        
        
        
-       %计算CaR的mtau htau
+       % CaR, mtau htau
        [tauh_CaR_MSN_Soma, taum_CaR_MSN_Soma] = tau_CaR_MSN(y(1));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaR_MSN_Soma = infinite(y(1),CaR_MSN.mVhalf,CaR_MSN.mk);
        hInf_CaR_MSN_Soma = infinite(y(1),CaR_MSN.hVhalf,CaR_MSN.hk);
        
-       %计算 21 22 m,h  % 26 Ca Ca_i
+       %  21 22 m,h
        dy(21) = (mInf_CaR_MSN_Soma-y(21))/taum_CaR_MSN_Soma;
        dy(22) = (hInf_CaR_MSN_Soma-y(22))/tauh_CaR_MSN_Soma;
        
@@ -370,13 +370,13 @@ toc
        
        %----------------------CaT----------------------------
        
-       %计算CaT的mtau htau
+       % CaT, mtau htau
        [tauh_CaT_MSN_Soma, taum_CaT_MSN_Soma] = tau_CaT_MSN(y(1));
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaT_MSN_Soma = infinite(y(1),CaT_MSN.mVhalf,CaT_MSN.mk);
        hInf_CaT_MSN_Soma = infinite(y(1),CaT_MSN.hVhalf,CaT_MSN.hk);
        
-       %计算 23 24 m,h  % 25 CaL CaL_i
+       %  23 24 m,h
        dy(23) = (mInf_CaT_MSN_Soma-y(23))/taum_CaT_MSN_Soma;
        dy(24) = (hInf_CaT_MSN_Soma-y(24))/tauh_CaT_MSN_Soma;
        
@@ -394,8 +394,8 @@ toc
        Kd_Ca_MSN = 1e-4;%--------mmol/L
        tau_R_MSN = 43;
        I_CaL_MSN_Soma = I_CaL1_2_MSN_Soma+I_CaL1_3_MSN_Soma+I_CaT_MSN_Soma;
-       drive_channel_CaL_MSN_Soma = -drive_MSN * I_CaL_MSN_Soma /(2*F_MSN*depth_MSN);%----------把传入的钙（从通道）转换成内部的浓度变化
-       %---------------------如果<=0,不能泵入
+       drive_channel_CaL_MSN_Soma = -drive_MSN * I_CaL_MSN_Soma /(2*F_MSN*depth_MSN);
+
        if drive_channel_CaL_MSN_Soma<=0
            drive_channel_CaL_MSN_Soma = 0;
        end
@@ -405,7 +405,7 @@ toc
        
        %----------------------26 Ca ----------------------------
        I_Ca_MSN_Soma = I_CaN_MSN_Soma+I_CaQ_MSN_Soma+I_CaR_MSN_Soma;
-       drive_channel_Ca_MSN_Soma = -drive_MSN * I_Ca_MSN_Soma /(2*F_MSN*depth_MSN);%----------把传入的钙（从通道）转换成内部的浓度变化
+       drive_channel_Ca_MSN_Soma = -drive_MSN * I_Ca_MSN_Soma /(2*F_MSN*depth_MSN);
        if drive_channel_Ca_MSN_Soma<=0
            drive_channel_Ca_MSN_Soma = 0;
        end
@@ -428,7 +428,7 @@ toc
        
        
        
-       %----------------------I_L漏电流----------------------------
+       %----------------------I_L----------------------------
        I_L_MSN_Soma = Leak_MSN.gmax*(y(1)-Leak_MSN.rev);
        
        %----------------------Proximal 2,31-56----------------------------
@@ -442,42 +442,42 @@ toc
        
        %----------------------NaF---------------------------
        
-       %计算NaF的mtau htau
+       % NaF, mtau htau
        [tauh_NaF_MSN_Dendrite, taum_NaF_MSN_Dendrite] = tau_NaF_MSN(y(2));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_NaF_MSN_Dendrite = infinite(y(2),NaF_MSN_Dendrite.mVhalf,NaF_MSN_Dendrite.mk);
        hInf_NaF_MSN_Dendrite = infinite(y(2),NaF_MSN_Dendrite.hVhalf,NaF_MSN_Dendrite.hk);
        
-       %计算31 32 m,h
+       % 31 32 m,h
        dy(31) = (mInf_NaF_MSN_Dendrite-y(31))/taum_NaF_MSN_Dendrite;
        dy(32) = (hInf_NaF_MSN_Dendrite-y(32))/tauh_NaF_MSN_Dendrite;
        I_NaF_MSN_Dendrite = NaF_MSN_Dendrite.gmax*(y(31)^3)*y(32)*(y(2)-NaF_MSN_Dendrite.rev);%-----mA
        
        %----------------------NaP----------------------------
        
-       %计算NaP的mtau htau
+       % NaP, mtau htau
        [tauh_NaP_MSN_Dendrite, taum_NaP_MSN_Dendrite] = tau_NaP_MSN(y(2));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_NaP_MSN_Dendrite = infinite(y(2),NaP_MSN_Dendrite.mVhalf,NaP_MSN_Dendrite.mk);
        hInf_NaP_MSN_Dendrite = infinite(y(2),NaP_MSN_Dendrite.hVhalf,NaP_MSN_Dendrite.hk);
        
-       %计算 33 34  m,h
+       %  33 34  m,h
        dy(33) = (mInf_NaP_MSN_Dendrite-y(33))/taum_NaP_MSN_Dendrite;
        dy(34) = (hInf_NaP_MSN_Dendrite-y(34))/tauh_NaP_MSN_Dendrite;
        I_NaP_MSN_Dendrite = NaP_MSN_Dendrite.gmax*y(33)*y(34)*(y(2)-NaP_MSN_Dendrite.rev);%---------mA
        
        %----------------------KAf----------------------------
        
-       %计算KAf的mtau htau
+       % KAf, mtau htau
        [tauh_KAf_MSN_Dendrite, taum_KAf_MSN_Dendrite] = tau_KAf_MSN(y(2));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_KAf_MSN_Dendrite = infinite(y(2),KAf_MSN_Dendrite.mVhalf,KAf_MSN_Dendrite.mk);
        hInf_KAf_MSN_Dendrite = infinite(y(2),KAf_MSN_Dendrite.hVhalf,KAf_MSN_Dendrite.hk);
        
-       %计算35 36 m,h
+       % 35 36 m,h
        dy(35) = (mInf_KAf_MSN_Dendrite-y(35))/taum_KAf_MSN_Dendrite;
        dy(36) = (hInf_KAf_MSN_Dendrite-y(36))/tauh_KAf_MSN_Dendrite;
        I_KAf_MSN_Dendrite = KAf_MSN_Dendrite.gmax*(y(35)^2)*y(36)*(y(2)-KAf_MSN_Dendrite.rev);%---------mA
@@ -486,14 +486,14 @@ toc
        %----------------------KAs----------------------------
        
        
-       %计算KAs的mtau htau
+       % KAs, mtau htau
        [tauh_KAs_MSN_Dendrite, taum_KAs_MSN_Dendrite] = tau_KAs_MSN(y(2));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_KAs_MSN_Dendrite = infinite(y(2),KAs_MSN_Dendrite.mVhalf,KAs_MSN_Dendrite.mk);
        hInf_KAs_MSN_Dendrite = infinite(y(2),KAs_MSN_Dendrite.hVhalf,KAs_MSN_Dendrite.hk);
        
-       %计算 37 38 m,h
+       %  37 38 m,h
        dy(37) = (mInf_KAs_MSN_Dendrite-y(37))/taum_KAs_MSN_Dendrite;
        dy(38) = (hInf_KAs_MSN_Dendrite-y(38))/tauh_KAs_MSN_Dendrite;
        I_KAs_MSN_Dendrite = KAs_MSN_Dendrite.gmax(floor(t/0.02)+1)*(y(37)^2)*(KAs_MSN_Dendrite.a*y(38)+(1-KAs_MSN_Dendrite.a))*(y(2)-KAs_MSN_Dendrite.rev);%---------mA
@@ -501,26 +501,26 @@ toc
        %----------------------KIR----------------------------
        
        
-       %计算KIR的mtau
+       % KIR, mtau
        taum_KIR_MSN_Dendrite = tau_KIR_MSN(y(2));
        
-       %计算mInf
+       % mInf
        mInf_KIR_MSN_Dendrite = infinite(y(2),KIR_MSN.mVhalf,KIR_MSN.mk);
        
-       %计算 39 m
+       %  39 m
        dy(39) = (mInf_KIR_MSN_Dendrite-y(39))/taum_KIR_MSN_Dendrite;
        I_KIR_MSN_Dendrite = KIR_MSN.gmax*y(39)*(y(2)-KIR_MSN.rev);%---------mA
        
        %----------------------CaL1_2----------------------------
        
-       %计算CaL1_2的mtau htau
+       % CaL1_2, mtau htau
        [tauh_CaL_MSN_Dendrite, taum_CaL_MSN_Dendrite] = tau_CaL_MSN(y(2));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaL1_2_MSN_Dendrite = infinite(y(2),CaL1_2_MSN.mVhalf,CaL1_2_MSN.mk);
        hInf_CaL1_2_MSN_Dendrite = infinite(y(2),CaL1_2_MSN.mVhalf,CaL1_2_MSN.mk);
        
-       %计算 40 41 m,h  % 51 L型Ca CaL_i
+       %  40 41 m,h
        dy(40) = (mInf_CaL1_2_MSN_Dendrite-y(40))/taum_CaL_MSN_Dendrite;
        dy(41) = (hInf_CaL1_2_MSN_Dendrite-y(41))/tauh_CaL_MSN_Dendrite;
        
@@ -529,13 +529,13 @@ toc
        
        %----------------------CaL1_3----------------------------
        
-       %计算CaL1_3的mtau htau-----------与CaL1_2的相同
+       % CaL1_3, mtau htau
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaL1_3_MSN_Dendrite = infinite(y(2),CaL1_3_MSN.mVhalf,CaL1_3_MSN.mk);
        hInf_CaL1_3_MSN_Dendrite = infinite(y(2),CaL1_3_MSN.mVhalf,CaL1_3_MSN.mk);
        
-       %计算 42 43 m,h  % 51 L型Ca CaL_i
+       %  42 43 m,h
        dy(42) = (mInf_CaL1_3_MSN_Dendrite-y(42))/taum_CaL_MSN_Dendrite;
        dy(43) = (hInf_CaL1_3_MSN_Dendrite-y(43))/tauh_CaL_MSN_Dendrite;
        
@@ -547,16 +547,16 @@ toc
        %----------------------CaN----------------------------
        
        
-       %计算CaN的mtau htau
+       % CaN, mtau htau
        [tauh_CaN_MSN_Dendrite, taum_CaN_MSN_Dendrite] = tau_CaN_MSN(y(2));
        
        
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaN_MSN_Dendrite = infinite(y(2), CaN_MSN.mVhalf, CaN_MSN.mk);
        hInf_CaN_MSN_Dendrite = infinite(y(2), CaN_MSN.hVhalf, CaN_MSN.hk);
        
-       %计算 44 45 m,h  % 52 Ca Ca_i
+       %  44 45 m,h
        dy(44) = (mInf_CaN_MSN_Dendrite-y(44))/taum_CaN_MSN_Dendrite;
        dy(45) = (hInf_CaN_MSN_Dendrite-y(45))/tauh_CaN_MSN_Dendrite;
        
@@ -567,14 +567,14 @@ toc
        %----------------------CaQ----------------------------
        
        
-       %计算CaQ的mtau
+       % CaQ, mtau
        taum_CaQ_MSN_Dendrite = tau_CaQ_MSN(y(2));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaQ_MSN_Dendrite = infinite(y(2),CaQ_MSN.mVhalf,CaQ_MSN.mk);
        
        
-       %计算 46 m  % 52 Ca Ca_i
+       %  46 m
        dy(46) = (mInf_CaQ_MSN_Dendrite-y(46))/taum_CaQ_MSN_Dendrite;
        
        g_CaQ_MSN_Dendrite = g_Ca_MSN(y(2),y(52),Ca_0_MSN);
@@ -586,14 +586,14 @@ toc
        
        
        
-       %计算CaR的mtau htau
+       % CaR, mtau htau
        [tauh_CaR_MSN_Dendrite, taum_CaR_MSN_Dendrite] = tau_CaR_MSN(y(2));
        
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaR_MSN_Dendrite = infinite(y(2),CaR_MSN.mVhalf,CaR_MSN.mk);
        hInf_CaR_MSN_Dendrite = infinite(y(2),CaR_MSN.hVhalf,CaR_MSN.hk);
        
-       %计算 47 48 m,h  % 52 Ca Ca_i
+       %  47 48 m,h
        dy(47) = (mInf_CaR_MSN_Dendrite-y(47))/taum_CaR_MSN_Dendrite;
        dy(48) = (hInf_CaR_MSN_Dendrite-y(48))/tauh_CaR_MSN_Dendrite;
        
@@ -603,13 +603,13 @@ toc
        
        %----------------------CaT----------------------------
        
-       %计算CaT的mtau htau
+       % CaT, mtau htau
        [tauh_CaT_MSN_Dendrite, taum_CaT_MSN_Dendrite] = tau_CaT_MSN(y(2));
-       %计算mInf hInf
+       % mInf hInf
        mInf_CaT_MSN_Dendrite = infinite(y(2),CaT_MSN.mVhalf,CaT_MSN.mk);
        hInf_CaT_MSN_Dendrite = infinite(y(2),CaT_MSN.hVhalf,CaT_MSN.hk);
        
-       %计算 49 50 m,h  % 51 CaL CaL_i
+       %  49 50 m,h
        dy(49) = (mInf_CaT_MSN_Dendrite-y(49))/taum_CaT_MSN_Dendrite;
        dy(50) = (hInf_CaT_MSN_Dendrite-y(50))/tauh_CaT_MSN_Dendrite;
        
@@ -619,8 +619,7 @@ toc
        %----------------------51 CaLdyn ----------------------------
        
        I_CaL_MSN_Dendrite = I_CaL1_2_MSN_Dendrite+I_CaL1_3_MSN_Dendrite+I_CaT_MSN_Dendrite;
-       drive_channel_CaL_MSN_Dendrite = -drive_MSN * I_CaL_MSN_Dendrite /(2*F_MSN*depth_MSN);%----------把传入的钙（从通道）转换成内部的浓度变化
-       %---------------------如果<=0,不能泵入
+       drive_channel_CaL_MSN_Dendrite = -drive_MSN * I_CaL_MSN_Dendrite /(2*F_MSN*depth_MSN);
        if drive_channel_CaL_MSN_Dendrite<=0
            drive_channel_CaL_MSN_Dendrite = 0;
        end
@@ -630,7 +629,7 @@ toc
        
        %----------------------52 Ca ----------------------------
        I_Ca_MSN_Dendrite = I_CaN_MSN_Dendrite+I_CaQ_MSN_Dendrite+I_CaR_MSN_Dendrite;
-       drive_channel_Ca_MSN_Dendrite = -drive_MSN * I_Ca_MSN_Dendrite /(2*F_MSN*depth_MSN);%----------把传入的钙（从通道）转换成内部的浓度变化
+       drive_channel_Ca_MSN_Dendrite = -drive_MSN * I_Ca_MSN_Dendrite /(2*F_MSN*depth_MSN);
        if drive_channel_Ca_MSN_Dendrite<=0
            drive_channel_Ca_MSN_Dendrite = 0;
        end
@@ -653,7 +652,7 @@ toc
        
        
        
-       %----------------------I_L漏电流----------------------------
+       %----------------------I_L----------------------------
        I_L_MSN_Dendrite = Leak_MSN.gmax*(y(2)-Leak_MSN.rev);
        
 
@@ -694,7 +693,7 @@ toc
                NMDA_Mg_Block_MSN*(y(2)-NMDA_PFCPyra2MSN.rev)*Net_Strength(1,4+PFC_Pyra_Num);
        end
        I_MSN_Excitatory = sum(I_AMPA_PFCPyra2MSN) + sum(I_NMDA_PFCPyra2MSN);
-       %------------主方程-------------
+       %------------main function-------------
        I_ion_MSN_Soma = (I_NaF_MSN_Soma+I_NaP_MSN_Soma+I_KAf_MSN_Soma+I_KAs_MSN_Soma+I_KIR_MSN_Soma+...
            I_KRP_MSN_Soma+I_CaL1_2_MSN_Soma+I_CaL1_3_MSN_Soma+I_CaN_MSN_Soma+...
            I_CaQ_MSN_Soma+I_CaR_MSN_Soma+I_CaT_MSN_Soma+I_L_MSN_Soma+I_SKKCa_MSN_Soma+I_BKKCa_MSN_Soma)*1000;%1000
@@ -1146,3 +1145,4 @@ toc
        end
     end
 end
+
