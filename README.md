@@ -19,5 +19,5 @@ Run CalculateSurfaceArea.mlx to get the surface area of each neuron.
   
 **Additional notes:**  
 1. We have adjusted the parameter settings for different studies. Please adjust the parameters of this DEMO according to the references if you want to reproduce our results.  
-2. The resulting file is too large for us and we are unable to upload it to GITHUB. Our program is reproducible. Please follow the steps described above, save the results to your computer after running it, and then proceed to the next step!  
+2. Since the results files are too large, we are unable to upload the complete files to GITHUB. Please follow the steps above, and run the scripts based on the parameters described in our papers to reproduce our results.
 3. Please contact Dr. Yuanxi Li at dr.yuanxili@gmail.com if you have any questions.  
